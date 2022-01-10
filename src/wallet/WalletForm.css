@@ -1,0 +1,42 @@
+.wallet-form{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 40px;
+}
+.wallet-form form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wallet-form form div label{
+    text-align: left;
+}
+.wallet-form form div label{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.wallet-form form .field{
+    margin-bottom: 30px;
+}
+.wallet-form form .field p{
+    font-size: 13px;
+    color: grey;
+    margin-top: 4px;
+}
+.wallet-form form .field input{
+    height: 40px;
+}
+.submit-btn{
+    text-align: center;
+    background: #3B99FC;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}

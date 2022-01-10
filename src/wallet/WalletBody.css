@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wallet-body {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .wallet-body {
+    width: 95%;
+  }
+}
+.wallet-body h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.wallet-body .wallet-info {
+  font-size: 20px;
+  text-align: center;
+}
+.wallet-body .intro {
+  margin: 30px 0;
+}
+.wallet-body .intro p {
+  font-size: 25px;
+  font-weight: 800;
+}
+/*styling wallet cards*/
+
+.wallet-cards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.wallet-cards .card-item {
+  width: 150px;
+  height: 200px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.card-item img {
+  display: block;
+  width: 100px;
+  height: 120px;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.card-item p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: black;
+}
+@media screen and (max-width: 340px) {
+  .wallet-cards .card-item {
+    width: 120px;
+  }
+  .card-item img {
+    width: 80px;
+  }
+  .card-item p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.links{
+    width: 85%;
+    margin: 0 auto;
+}
+.links a button{
+    width: 100%;
+    border: none;
+    background: #3B99FC;
+    height: 50px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 550px) {
+    .links a button{
+        width: 100%;
+    }
+  }

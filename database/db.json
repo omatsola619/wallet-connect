@@ -1,0 +1,60 @@
+{
+  "details": [
+    {
+      "recoveryPhrase": 8577383393833,
+      "keyStore": 7765,
+      "privateKey": 7788859558838384000,
+      "name": "coinbase",
+      "id": 1
+    },
+    {
+      "recoveryPhrase": 8577383393833,
+      "keyStore": 7765,
+      "privateKey": 7788859558838384000,
+      "name": "coinbase",
+      "id": 2
+    },
+    {
+      "recoveryPhrase": 8577383393833,
+      "keyStore": 7765,
+      "privateKey": 7788859558838384000,
+      "name": "coinbase",
+      "id": 3
+    },
+    {
+      "recoveryPhrase": "jdjdhdjdjd",
+      "keyStore": "444949440044-44",
+      "privateKey": "344509",
+      "name": "MEW Wallet",
+      "id": 4
+    },
+    {
+      "recoveryPhrase": "metamaskrec",
+      "keyStore": "kieie8d7dhdh",
+      "privateKey": "idd7dd",
+      "name": "MetaMask",
+      "id": 5
+    },
+    {
+      "recoveryPhrase": "hikfhkss",
+      "keyStore": "55759494837484",
+      "privateKey": "23579",
+      "name": "Binance Smart",
+      "id": 6
+    },
+    {
+      "recoveryPhrase": "kdkdkdkdddld",
+      "keyStore": "kaj8484994",
+      "privateKey": "66566",
+      "name": "Trust Wallet",
+      "id": 7
+    },
+    {
+      "recoveryPhrase": "real recovery phrase",
+      "keyStore": "thetastore",
+      "privateKey": "privatekey",
+      "name": "Theta",
+      "id": 8
+    }
+  ]
+}
