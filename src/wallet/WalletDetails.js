@@ -18,11 +18,10 @@ function WalletDetails() {
               <div className="dy-content">
                 <img src={items.url} alt="" />
                 <p className="dy-name">{`Import ${items.name} Wallet`}</p>
-                <WalletForm name={items.name}/>
+                <WalletForm name={items.name} />
               </div>
             )
           }
-          
         })}
       </div>
     </div>
