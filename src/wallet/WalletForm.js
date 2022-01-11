@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import './WalletForm.css'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function WalletForm({ name }) {
   const [recoveryPhrase, setRecoveryPhrase] = useState()
   const [keyStore, setkeyStore] = useState()
   const [privateKey, setprivateKey] = useState()
+  const history = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    //replace url with api link below
     const url = 'http://localhost:8000/details'
 
     axios
@@ -20,7 +23,7 @@ function WalletForm({ name }) {
       })
       .then((response) => {
         console.log(response)
-        console.log(response.data)
+        history('/final')
       })
       .catch((err) => {
         console.log(err.message)
