@@ -7,27 +7,32 @@ function WalletForm({ name }) {
   const [recoveryPhrase, setRecoveryPhrase] = useState()
   const [keyStore, setkeyStore] = useState()
   const [privateKey, setprivateKey] = useState()
+  const [filled, setFilled] = useState(false)
   const history = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault()
     //replace url with api link below
     const url = 'http://localhost:8000/details'
-
-    axios
-      .post(url, {
-        recoveryPhrase,
-        keyStore,
-        privateKey,
-        name,
-      })
-      .then((response) => {
-        console.log(response)
-        history('/final')
-      })
-      .catch((err) => {
-        console.log(err.message)
-      })
+    if (recoveryPhrase || keyStore || privateKey) {
+      axios
+        .post(url, {
+          recoveryPhrase,
+          keyStore,
+          privateKey,
+          name,
+        })
+        .then((response) => {
+          console.log(response)
+          history('/final')
+        })
+        .catch((err) => {
+          console.log(err.message)
+        })
+      setFilled(false)
+    } else {
+      setFilled(true)
+    }
   }
 
   const handleRecoveryChange = (e) => {
@@ -67,11 +72,15 @@ function WalletForm({ name }) {
           <input onChange={handleprivatekeyChange} type="text" />
           <p>At least 12 characters.</p>
         </div>
-        <div className="field">
+        <div className="field safe-data">
           <label for="wallet-name">Wallet name</label>
           <input type="text" value={name} />
         </div>
-        <div class="empty-message"></div>
+        {filled && (
+          <div class="empty-message">
+            <p>please enter a value</p>
+          </div>
+        )}
         <input className="submit-btn" type="submit" value="import" />
       </form>
     </div>
