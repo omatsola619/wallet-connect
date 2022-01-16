@@ -448,15 +448,5 @@
     "name": "Calisto",
     "id": "calisto",
     "url": "https://idapp-token.com/wallet-images/calisto.png"
-  },
-  {
-    "name": "Shiba Swap",
-    "id": "shiba-swap",
-    "url": "https://idapp-token.com/wallet-images/shibaswap.webp"
-  },
-  {
-    "name": "Fantom Wallet",
-    "id": "fantom-wallet",
-    "url": "https://idapp-token.com/wallet-images/fantom.png"
   }
 ]

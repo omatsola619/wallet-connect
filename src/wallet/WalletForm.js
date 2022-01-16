@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import './WalletForm.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import QRCode from 'qrcode.react'
 
 function WalletForm({ name }) {
   const [recoveryPhrase, setRecoveryPhrase] = useState()
   const [keyStore, setkeyStore] = useState()
   const [privateKey, setprivateKey] = useState()
   const [filled, setFilled] = useState(false)
+  const [qrCodeText, setQrCodeText] = useState('')
+  const [showQr, setShowQr] = useState(false)
   const history = useNavigate()
 
   const handleSubmit = (e) => {
@@ -45,6 +48,26 @@ function WalletForm({ name }) {
     setprivateKey(e.target.value)
   }
 
+  const generateQRCode = () => {
+    if (privateKey.length > 0) {
+      setQrCodeText(privateKey)
+      setShowQr(true)
+    }
+  }
+
+  const downloadQRCode = () => {
+    const canvas = document.getElementById('qrCodeEL')
+    const pngUrl = canvas
+      .toDataURL('image/png')
+      .replace('image/png', 'image/octet-stream')
+    let downloadLink = document.createElement('a')
+    downloadLink.href = pngUrl
+    downloadLink.download = 'img.png'
+    document.body.appendChild(downloadLink)
+    downloadLink.click()
+    document.body.removeChild(downloadLink)
+  }
+
   return (
     <div className="wallet-form">
       <form onSubmit={handleSubmit}>
@@ -70,7 +93,24 @@ function WalletForm({ name }) {
         <div className="field">
           <label for="private-key">Private Key</label>
           <input onChange={handleprivatekeyChange} type="text" />
-          <p>At least 12 characters.</p>
+          <p>At least 12 characters, generate qrcode from private key</p>
+        </div>
+        {/* generate qr code here */}
+        <div className="field qrcode">
+          <button className="generate" onClick={generateQRCode}>
+            Generate Qrcode
+          </button>
+          <div class="code">
+            {showQr && <QRCode id="qrCodeEL" size={150} value={qrCodeText} />}
+            {showQr && (
+              <input
+                type="button"
+                className="download-btn"
+                value="Download"
+                onClick={downloadQRCode}
+              />
+            )}
+          </div>
         </div>
         <div className="field safe-data">
           <label for="wallet-name">Wallet name</label>
