@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="header">
       <div class="header-items">
-        <img src="https://idapp-token.com/_nuxt/img/logo.f4dc796.png" alt="" />
+        <img src="https://i.ibb.co/C7Fj0MP/waplogo.png" alt="" />
         <p>WalletConnect</p>
       </div>
     </div>

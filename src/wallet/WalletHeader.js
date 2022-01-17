@@ -9,7 +9,7 @@ function WalletHeader() {
         <div className='wallet-header'>
             <div class="top">
                 <button class="back" onClick={() => history(-1)}>{`<<Back`}</button>
-                <img src="https://idapp-token.com/_nuxt/img/logo-dark.618a429.png" alt="" /> 
+                <img src="https://gitcoin.co/dynamic/avatar/walletconnect" alt="" /> 
                 <div></div>
             </div>
         </div>
